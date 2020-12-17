@@ -26,9 +26,9 @@ You should see the following output if everything works - and then your bot will
 [08:00] info: Connecting to irc-ws.chat.twitch.tv on port 443..
 [08:00] info: Sending authentication to server..
 [08:00] info: Connected to server.
-[08:00] info: Executing command: JOIN #norien711
-[08:00] info: [#norien711] Now hosting nerdragefred for 0 viewer(s).
-[08:00] info: Joined #norien711
+[08:00] info: Executing command: JOIN #your channel
+[08:00] info: [#your channel] Now hosting nerdragefred for 0 viewer(s).
+[08:00] info: Joined #your channel
 ```
 
 ## To Do
