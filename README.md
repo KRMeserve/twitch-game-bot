@@ -31,6 +31,12 @@ You should see the following output if everything works - and then your bot will
 [08:00] info: Joined #your channel
 ```
 
+## Current Commands
+- !flipTable
+- !dadJoke
+- !coins
+- !steal @<username>
+
 ## To Do
 
 - Create a real text-based game that can run in chat. Ideally one that is a bit deeper than the steal coins game that is currently in place. Potentially an rpg?

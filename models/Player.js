@@ -4,7 +4,7 @@ class Player {
     this.subscriber = subscriber;
     this.coins = subscriber ? 200 : 100;
   }
-  steal(target) {
+  steal() {
     this.gainMoney();
   }
   loseMoney() {

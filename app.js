@@ -1,7 +1,7 @@
 // import packages
+require('dotenv').config(); // accesses .env variables
 const _ = require('lodash');
 const https = require('https');
-require('dotenv').config(); // accesses .env variables
 const tmi = require("tmi.js"); // import tmi.js
 // import models
 const Player = require('./models/Player.js');
@@ -63,12 +63,12 @@ client.on("message", (channel, tags, message, self) => {
     const target = message.toLowerCase().substring(message.indexOf("@") + 1);
     if (players[target]) {
       players[target].loseMoney();
-      players[tags.username].steal(target);
+      players[tags.username].steal();
       checkWin(tags);
     } else {
       client.say(
         channel,
-        `@${tags.username} tried to steal from no one. Remember to target someone by typing !steal @<username>`
+        `@${tags.username} tried to steal from no one. Remember to target someone by typing !steal @<username>. And you can't steal from me!`
       );
     }
   }
@@ -91,6 +91,7 @@ client.on("message", (channel, tags, message, self) => {
       res.on("data", (d) => {
         // posting the plain text response into the chat
         client.say(channel, `${d}`);
+        // process.stdout.write(d); // This is pretty much just console.logging the results
       });
     });
 
@@ -104,7 +105,7 @@ client.on("message", (channel, tags, message, self) => {
     } else if (randomNumber === 1) {
       client.say(channel, `┻━┻ ︵ ヽ(°□°ヽ)`);
     } else {
-      client.say(channel, `┬─┬ノ( º _ ºノ)`);
+      client.say(channel, `┬─┬ノ( º _ ºノ) Please don't make me flip this desk.`);
     }
   }
 });
