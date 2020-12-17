@@ -6,13 +6,15 @@ class Player {
   }
   steal(target) {
     this.gainMoney();
-    return `@${this.name} stole from @${target}!`;
   }
   loseMoney() {
     this.coins -= 15;
   }
   gainMoney() {
     this.coins += 15;
+  }
+  resetCoins() {
+    this.coins = 100;
   }
   reportCoins() {
     return `${this.coins}`;
